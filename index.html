@@ -5,11 +5,317 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
+    <style>
+      table, th, td {border: 1px solid black; border-collapse: collapse; padding-left: .1cm;}
+    </style>
   </head>
   <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
-    <script>
-      // Run queries and display results here
-    </script>
+        <div class="mixpanel-platform-section">
+      <div class="instructions">
+        <h1 style="font-size: 18px; color: rgb(95,105,131)">Glossary: Metrics Definitions</h1>
+      </div>
+    <table border="1">
+<tbody>
+<tr>
+<td><strong><font color=blue>Event Name</font></strong></td>
+<td><strong><font color=blue>Type</font></strong></td>
+<td><strong><font color=blue>Definition</font></strong></td>
+
+</tr>
+<tr>
+<td><strong>App Opened</strong></td>
+<td></td>
+<td>This event is triggered on app cold launch, when an app is opened via deeplink, and when an app is foregrounded after 5 minutes (which launches a new app session)</td>
+</tr>
+
+
+<tr>
+<td><strong>Free Trial Initiated</strong></td>
+<td></td>
+<td>Triggered on every free trial, and more specifically when a user encounters the 'Trial Success Screen' on the app after successfully authenticating on the app store</td>
+</tr>
+
+<tr>
+<td><strong>Franchise View Open</strong></td>
+<td></td>
+<td>Triggered when a user taps on a Franchise/Show from the lobby</td>
+</tr>
+
+<tr>
+<td><strong>Video Started</strong></td>
+<td></td>
+<td>Fired when a video starts playing, whether through autoplay, deeplink or a click event</td>
+</tr>
+
+<tr>
+<td><strong>Video Watched</strong></td>
+<td></td>
+<td>Fired when the play screen or view screen stops or changes, which may be when the app is backgrounded, when a video complete with autoplay is disabled, or when a video completes and user moves on to next video with autoplay enabled</td>
+</tr>
+
+<tr>
+<td><strong>Franchise View Closed</strong></td>
+<td></td>
+<td>Fired when user closes the franchise/show's episode view list</td>
+</tr>
+
+<tr>
+<td><strong>Session</strong></td>
+<td></td>
+<td>Denotes when a user's attention shifts away from the app and finalizes their visit, namely when the user force closes the app, or after the user backgrounds the app for more than 5 minutes</td>
+</tr>
+
+<tr>
+<td><strong><font color=blue>Property Name</font></strong></td>
+<td><strong><font color=blue>Type</font></strong></td>
+<td><strong><font color=blue>Definition</font></strong></td>
+
+</tr>
+<tr>
+<td><strong>% Complete</strong></td>
+<td>Super</td>
+<td>% of video that user watched across specific time period</td>
+</tr>
+<tr>
+<td><strong>Android App Version</strong></td>
+<td>People</td>
+<td>Android current app version</td>
+</tr>
+<tr>
+<td><strong>Android Brand</strong></td>
+<td>People</td>
+<td>Android device brand</td>
+</tr>
+<tr>
+<td><strong>Android Manufacturer</strong></td>
+<td>People</td>
+<td>Android device manufacturer</td>
+</tr>
+<tr>
+<td><strong>Android Model</strong></td>
+<td>People</td>
+<td>Android device model</td>
+</tr>
+<tr>
+<td><strong>Android OS</strong></td>
+<td>People</td>
+<td>Android operating system</td>
+
+</tr>
+<tr>
+<td><strong>Android OS Version</strong></td>
+<td>People</td>
+<td>Current Android version for this device</td>
+
+</tr>
+<tr>
+<td><strong>Apps Plays</strong></td>
+<td>Super</td>
+<td>Denotes when App Session is launched. Sessions end when user force closes the app or backgrounds app for more than 5 minutes</td>
+</tr>
+<tr>
+<td><strong>App Version</strong></td>
+<td>Super</td>
+<td>Current App Version</td>
+</tr>
+<tr>
+<td><strong>Buffering Time (seconds)</strong></td>
+<td>Super</td>
+<td>Time spent for video data to pre-load to enable streaming in seconds</td>
+
+</tr>
+<tr>
+<td><strong>Carrier</strong></td>
+<td>Super</td>
+<td>Wireless carrier of the device owner</td>
+</tr>
+<tr>
+<td><strong>City </strong></td>
+<td>Super</td>
+<td>The city of the event sender, parsed from IP</td>
+
+</tr>
+<tr>
+<td><strong>Content ID</strong></td>
+<td>Super</td>
+<td>Displays the Video Title ID as generated in the ARC Content Management Tool, also known as the MGID</td>
+</tr>
+<tr>
+<td><strong>Content Name</strong></td>
+<td>Super</td>
+<td>Displays show name along with season and episode number</td>
+
+</tr>
+<tr>
+<td><strong>Content Type</strong></td>
+<td>Super</td>
+<td>Denotes whether content is long form or short form</td>
+</tr>
+<tr>
+<td><strong>Content View Duration</strong></td>
+<td>Super</td>
+<td>Displays minutes viewed before closing out of a specific show/franchise</td>
+
+</tr>
+<tr>
+
+<td><strong>Country</strong></td>
+<td>Super</td>
+<td>The country of the event sender, parsed from IP</td>
+</tr>
+<tr>
+
+<td><strong>Date of last app open</strong></td>
+<td>Super</td>
+<td>Date in which app was last launched, triggering a new session</td>
+</tr>
+<tr>
+<td><strong>Day of Week</strong></td>
+<td>Super</td>
+<td>Numeric Value denoting day of week where Sunday = 1 and Saturday = 7</td>
+</tr>
+<tr>
+<td><strong>Duration Watched (min)</strong></td>
+<td>Super</td>
+<td>Minutes user watch content in a single session</td>
+</tr>
+<tr>
+<td><strong>Episodes Played</strong></td>
+<td>Super</td>
+<td>Displays a list of episodes with show, season and episode names user views within a session</td>
+</tr>
+<tr>
+<td><strong>Episodes Viewed</strong></td>
+<td>Super</td>
+<td>Displays a list of episodes with show, season and episode names user views after navigatinv away from a particular show/franchise </td>
+</tr>
+<tr>
+<td><strong>First App Launch</strong></td>
+<td>Super</td>
+<td>Denotes whether this is the first session triggered by a user after install</td>
+</tr>
+<tr>
+<td><strong>First App Launch Date</strong></td>
+<td>Super</td>
+<td>Displays date of first app launch</td>
+</tr>
+<tr>
+<td><strong>Free Trial Initiated</strong></td>
+<td>Super</td>
+<td>Fired when a user successfully completes free tiral sign-up process</td>
+</tr>
+<tr>
+<td><strong>Hour of Day</strong></td>
+<td>Super</td>
+<td>Hour of day content was viewed</td>
+</tr>
+<tr>
+<td><strong>Load Time (seconds)</strong></td>
+<td>Super</td>
+<td>Time spent between video click and playback</td>
+</tr>
+<tr>
+<td><strong>Locked Content</strong></td>
+<td>Super</td>
+<td>Denotes clicked content that is behind the pay wall</td>
+</tr>
+<tr>
+<td><strong>Manufacturer</strong></td>
+<td>Super</td>
+<td>Device Manufacturer</td>
+</tr>
+<tr>
+<td><strong>media_source</strong></td>
+<td>Super</td>
+<td>Marketing Channel user was acquired from</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>Super</td>
+<td>Device Model</td>
+</tr>
+<tr>
+<td><strong>Operating System</strong></td>
+<td>Super</td>
+<td>Operating System for Android or iOS for this device</td>
+</tr>
+<tr>
+<td><strong>OS Version</strong></td>
+<td>Super</td>
+<td>Current iOS or Android version for this device</td>
+</tr>
+<tr>
+<td><strong>Previous Page</strong></td>
+<td>Super</td>
+<td>Displays navigational screen in app directly preceding current screen in user pathing analysis</td>
+</tr>
+<tr>
+<td><strong>Region</strong></td>
+<td>Super & People</td>
+<td>The region (state or province) of the event sender, parsed from IP</td>
+</tr>
+<tr>
+<td><strong>Scroll Triggers</strong></td>
+<td>Super</td>
+<td>Number of scroll navigational events triggered by user in a session</td>
+</tr>
+<tr>
+<td><strong>Session Duration (min)</strong></td>
+<td>Super</td>
+<td>Time spent by user before ending a sesssion in minutes</td>
+</tr>
+<tr>
+<td><strong>Show Name</strong></td>
+<td>Super</td>
+<td>Name of Viacom show or franchise. In Playplex apps these are represented by titles on the lobby</td>
+</tr>
+<tr>
+<td><strong>Shows Played</strong></td>
+<td>Super</td>
+<td>Displays a list of seperate shows/franchise a user watched within the same session</td>
+</tr>
+<tr>
+<td><strong>Timezone</strong></td>
+<td>People</td>
+<td>Displays a list of seperate shows/franchise a user watched within the same session</td>
+</tr>
+<tr>
+<td><strong>Total Minutes Watched</strong></td>
+<td>Super</td>
+<td>Cumulative total minutes users watched or viewed content within a session, including content repeat starts after content rewinds</td>
+</tr>
+<tr>
+<td><strong>Total Sessions</strong></td>
+<td>Super</td>
+<td>Sum of sessions across a specific period. Sessions end when user force closes the app or backgrounds app for more than 5 minutes</td>
+</tr>
+<tr>
+<td><strong>Total Shows Watched</strong></td>
+<td>Super</td>
+<td>Numeric sum of total shows/franchises watched by user within a session</td>
+</tr>
+<tr>
+<td><strong>Trial Started Date</strong></td>
+<td>People</td>
+<td>Per user, denotes the most recent trial start date</td>
+</tr>
+<tr>
+<td><strong>User Type</strong></td>
+<td>People</td>
+<td>Denotes whether a user is a guest/non paying user or a logged-in user who is either subscribed or on free trial</td>
+</tr>
+<tr>
+<td><strong>Video Type</strong></td>
+<td>Super</td>
+<td>Denotes whether the user is streaming content live or on-demand</td>
+</tr>
+<tr>
+<td><strong>Wifi</strong></td>
+<td>Super</td>
+<td>Set to true if Wifi is connected, false if not</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
   </body>
 </html>
